@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -8,7 +9,6 @@ module.exports = {
     },
     module: {
       rules: [
-
         {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
@@ -33,5 +33,11 @@ module.exports = {
         filename: 'static/dist/css/[name].bundle.css',
         allChunks: true,
       }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default'],        
+      })
     ]
   };
