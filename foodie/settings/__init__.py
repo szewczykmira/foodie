@@ -26,11 +26,13 @@ SECRET_KEY = 'You wish!'
 DEBUG = False
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = 'userprofile.User'
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'userprofile',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
