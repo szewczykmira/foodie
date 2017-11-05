@@ -3,6 +3,7 @@ from django.db import models
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True, verbose_name='E-mail')
+    fb_id = models.CharField(verbose_name='Id', max_length=30, primary_key=True)
     first_name = models.CharField(verbose_name='First name', max_length=15)
     last_name = models.CharField(verbose_name='Last name', max_length=15)
     is_active = models.BooleanField(verbose_name='Is active', default=False)
