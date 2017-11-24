@@ -27,7 +27,7 @@ SECRET_KEY = 'You wish!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*')
 AUTH_USER_MODEL = 'userprofile.User'
 
 
@@ -93,6 +93,7 @@ DATABASES = {
 }
 
 AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 

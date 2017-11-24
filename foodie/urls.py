@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include(core_urls)),
     url(r'profile/', include(userprofile_urls, namespace='profile')),
+    url('', include('social_django.urls', namespace='social')),
 ]
