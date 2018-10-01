@@ -10,4 +10,5 @@ Keep track whats expired in your kitchen
 6. Run `./manage.py migrate`
 7. Run `./manage.py runserver`
 
-## Development requirements can be found in `requirements_dev.txt`
+### Development notes
+ Development requirements can be found in `requirements_dev.txt`
