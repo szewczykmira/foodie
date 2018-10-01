@@ -9,3 +9,5 @@ Keep track whats expired in your kitchen
 5. Build static files with `webpack`.
 6. Run `./manage.py migrate`
 7. Run `./manage.py runserver`
+
+## Development requirements can be found in `requirements_dev.txt`
