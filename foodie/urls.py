@@ -16,8 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from core.urls import urlpatterns as core_urls
+from fridge.urls import urlpatterns as fridge_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include(core_urls)),
+    url(r'', include(fridge_urls)),
 ]
