@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 class Food(models.Model):
     since_when = models.DateTimeField(_("Since when"), auto_now=False, auto_now_add=False)
