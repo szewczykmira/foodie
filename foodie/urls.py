@@ -16,11 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from core.urls import urlpatterns as core_urls
-from userprofile.urls import urlpatterns as userprofile_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include(core_urls)),
-    url(r'profile/', include(userprofile_urls, namespace='profile')),
-    url('', include('social_django.urls', namespace='social')),
 ]
