@@ -1,13 +1,12 @@
-from rest_framework.generics import GenericAPIView
-from rest_framework.mixins import ListModelMixin
+from rest_framework import generics
 
 from fridge.models import Food
 from fridge.serializers import FoodSerializer
 
-
-class FoodView(GenericAPIView, ListModelMixin):
+class FoodList(generics.ListCreateAPIView):
     queryset = Food.objects.all()
     serializer_class = FoodSerializer
 
-    def get(self, *args, **kwargs):
-        return self.list(*args, **kwargs)
+class FoodView(generics.RetrieveDestroyAPIView):
+    queryset = Food.objects.all()
+    serializer_class = FoodSerializer
