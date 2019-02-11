@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from core.urls import urlpatterns as core_urls
 from fridge.urls import urlpatterns as fridge_urls
+from messanger.urls import urlpatterns as messanger_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include(fridge_urls)),
+    url(r'messanger/', include(messanger_urls)),
 ]
