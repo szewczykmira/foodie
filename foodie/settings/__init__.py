@@ -139,3 +139,8 @@ STATIC_ROOT = '/var/www/static'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, '..', 'static'),
 )
+
+
+# FACEBOOK INTEGRATION
+
+FACEBOOK_API_TOKEN = os.environ.get("FACEBOOK_API_TOKEN")
