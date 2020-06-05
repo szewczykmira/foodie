@@ -6,11 +6,11 @@
 #
 certifi==2018.10.15       # via requests
 chardet==3.0.4            # via requests
-django==1.11.6
-djangorestframework==3.8.2
+django==1.11.29           # via -r requirements.in
+djangorestframework==3.8.2  # via -r requirements.in
 idna==2.7                 # via requests
-psycopg2==2.7.3.1
-pymessenger==0.0.7.0
+psycopg2==2.7.3.1         # via -r requirements.in
+pymessenger==0.0.7.0      # via -r requirements.in
 pytz==2017.2              # via django
 requests-toolbelt==0.8.0  # via pymessenger
 requests==2.20.0          # via pymessenger, requests-toolbelt
